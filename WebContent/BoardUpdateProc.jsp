@@ -14,7 +14,7 @@
 </head>
 <body>
 	<%
-		//데이터 베이스레 연결
+		//데이터 베이스에 연결
 		BoardDAO bdao = new BoardDAO();
 		//해당 게시글의 패스워드값을 얻어옴
 		String pass = bdao.getPass(boardBean.getNum());
