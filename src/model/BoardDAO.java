@@ -80,7 +80,7 @@ public class BoardDAO {
 		getCon();
 		try {
 			//쿼리 준비 
-			String sql = "SELECT * FROM (SELECT A.*, Rownum Rnum FROM (SELECT * FROM Board ORDER BY ref desc, re_step asc)A)"
+			String sql = "SELECT * FROM (SELECT A.*, Rownum Rnum FROM (SELECT * FROM Board ORDER BY ref desc, re_level asc)A)"
 					+ "WHERE Rnum >= ? and Rnum <= ?";
 			//쿼리를 실행할 객체
 			pstmt = con.prepareStatement(sql);
